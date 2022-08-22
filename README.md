@@ -5,7 +5,8 @@ Sunshine is a lightweight, minimalist weather app that packs a few good features
 
 <strong>FEATURES</strong><br>
 - The app opens up with the default 4 cities, their current forecast, and temperature
-- Clicking the weather icon user is taken to the 3-day forecast for that city
+- The home city has a "special" display with current time and date
+- Clicking the weather icon a user is taken to the 3-day forecast for that city
 - Clicking on any of the cities' name the user can switch the cities on the fly
 - Clicking on the unit of temperature in the upper left of the navbar the user can switch displayed temperatures from Celsius to Fahrenheit
 - By registering, the user can set his own dashboard, entering his home-city and three other favorite cities to track, as well as preferred unit of temperature(C/F) 
