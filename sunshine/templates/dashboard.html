@@ -1,0 +1,48 @@
+
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="date-time">
+        <div class="mini-container">
+        <span><img class="city-icon" src="{{ h_icon }}"
+            height="50px" width="50px" alt="home_icon" /></span>
+        <span class="city-temp"> {{ h_temp }}°</span>
+        </div>
+        <p class="city-name"> {{ location }} </p>
+        <p id="home-time" class="hour"> {{ time }} </p>
+        <p id="home-date"> {{ month }} {{ day }}</p>
+    </div>
+
+    <div class="grid-container">
+        <div class="city-name">{{ current_user.favorite_city_one.upper() }}</div>
+        <div class="icon">
+        <img class="city-icon" src="{{ c_one_icon }}" height="32px" width="32px" alt="city_one_icon" />
+        </div>
+        <div class="city-temp"> {{ c_one_temp }}°</div>
+    </div>
+    <div class="grid-container">
+        <div class="city-name">{{ current_user.favorite_city_two.upper() }}</div>
+        <div class="icon">
+        <img class="city-icon" src="{{ c_two_icon }}" height="32px" width="32px" alt="city_two_icon" />
+        </div>
+        <div class="city-temp"> {{ c_two_temp }}°</div>
+    </div>
+    <div class="grid-container">
+        <div class="city-name">{{ current_user.favorite_city_three.upper() }}</div>
+        <div class="icon">
+        <img class="city-icon" src="{{ c_three_icon }}" height="32px" width="32px" alt="city_three_icon" />
+        </div>
+        <div class="city-temp"> {{ c_three_temp }}°</div>
+    </div>
+
+    <div class="location-form">
+        <form action="{{ url_for ('forecast') }}" method="POST">
+        <input id="search-field" name='field' type="text" />
+        <button id="search-btn" class="btn" type="submit">SEARCH</button>
+        </form>
+    </div>
+    <script type="text/javascript"> 
+        let allMonths = {{ months|tojson|safe }};
+        let KEY = {{ key|tojson|safe }};
+    </script>
+{% endblock %}

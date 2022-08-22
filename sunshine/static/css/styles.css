@@ -1,0 +1,187 @@
+html {
+  background-color: #30AADD;
+}
+
+body {
+  text-align: center;
+}
+
+.btn {
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid white;
+  color: white;
+  font-family: "Rubik";
+  font-weight: bold;
+  padding: 6px 12px;
+}
+
+.city-name:hover, .city-icon:hover, #main-temp:hover, .btn {
+  cursor: pointer;
+}
+
+.city-name, .city-temp {
+  margin-top: 5px;
+}
+
+.city-name {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.date-time {
+  border: 1px solid white;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7.5%;
+  color: white;
+  text-align: center;
+}
+
+div input {
+  padding: 6px 12px;
+  opacity: 50%;
+  border-radius: 5px;
+  border: none;
+}
+
+.form-row {
+  padding: 5px;
+}
+
+.form-wrap {
+  margin-top: 10%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  width: 250px;
+  background-color: #97d4ed;
+  text-align: center;
+  border-radius: 5% / 100%;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6px 6px;
+}
+
+.hour {
+  font-size: 2rem;
+  margin: 0px;
+}
+
+#temp-box {
+  border: none;
+  border-radius: 2.5px;
+  color: #30AADD;
+  padding: 2.5px;
+}
+
+.input {
+  font-family: "Rubik";
+  font-weight: bold;
+}
+
+.label {
+  color: white;
+  display: inline-block;
+  font-family: "Rubik";
+  font-weight: bold;
+  width: 115px;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  font-family: "Rubik";
+  font-weight: bold;
+  padding: 7.5px 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #06283D;
+}
+
+.location-form {
+  visibility: hidden;
+  margin-top: 50px;
+}
+
+#main-temp {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 9px;
+  background-color: #30AADD;
+  color: white;
+  border: none;
+  background: none;
+}
+
+#main-temp:hover {
+  background-color: #06283D;
+}
+
+.navbar {
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+
+p, .city-name, .city-temp, .weekly-item, #main-temp {
+  font-family: "Rubik";
+  font-weight: bold;
+  color: white;
+}
+
+ul {
+  background-color: #30AADD;
+  list-style-type: none;
+  position: fixed;
+  overflow: hidden;
+  padding: 0%;
+  top: 0;
+  width: 250px;
+}
+
+.w-cards {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-column-gap: 15px;
+  width: 250px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid white;
+}
+
+.weekly {
+  width: 250px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-row-gap: 20px;
+}
+
+.w-icon-card img {
+  margin-top: 10px;
+}
+
+.w-icon-card p {
+  margin-top: 0px;
+}
+
+#wrap {
+  min-width: 800px;
+}

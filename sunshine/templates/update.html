@@ -1,0 +1,33 @@
+
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="form-wrap">
+        <form action="/update" method="POST">
+            {{ form.hidden_tag() }}
+            <div class="form-row">
+                {{ form.home_city.label (class='label') }}
+                {{ form.home_city (class='input') }}
+            </div>
+            <div class="form-row">
+                {{ form.favorite_city_one.label (class='label') }}
+                {{ form.favorite_city_one (class='input') }}
+            </div>
+            <div class="form-row">
+                {{ form.favorite_city_two.label (class='label') }}
+                {{ form.favorite_city_two (class='input') }}
+            </div>
+            <div class="form-row">
+                {{ form.favorite_city_three.label (class='label') }}
+                {{ form.favorite_city_three (class='input') }}
+            </div>
+            <div class="form-row">
+                {{ form.temperature.label (class='label') }}
+                {{ form.temperature (id='temp-box', class='input') }}
+            </div>
+            <div class="form-row">
+                {{ form.submit (class='btn') }}
+            </div>
+        </form>
+    </div>
+{% endblock %}

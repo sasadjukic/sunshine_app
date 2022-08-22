@@ -1,0 +1,54 @@
+
+{% extends 'base.html' %}
+
+{% block body %}
+  <div class="date-time">
+    <div class="mini-container">
+      <span><img src="{{ l_icon }}" height="50px" width="50px" alt="local_icon" /></span>
+      <span class="city-temp"> {{ l_temp }}°</span>
+    </div>
+    <p id="city-detailed"> {{ updated_location }} <p>
+    <p class="hour"> {{ l_time }} </p>
+    <p> {{ l_month }} {{ l_day}}</p>
+  </div>
+
+  <div class="w-cards">
+    <div class="w-icon-card">
+      <img src="{{ url_for ('static', filename='images/wind.png') }}"
+        width="32px" height="32px" alt="wind_icon" />
+      <p>{{ wind_speed }} mp/h</p>
+    </div>
+    <div class="w-icon-card">
+      <img src="{{ url_for ('static', filename='images/air.png') }}"
+        width="32px" height="32px" alt="air_icon" />
+      <p>{{ air_pressure }} mb</p>
+    </div>
+    <div class="w-icon-card">
+      <img src="{{ url_for ('static', filename='images/flask.png') }}"
+        width="32px" height="32px" alt="hunidity_icon" />
+      <p>{{ humidity }} %</p>
+    </div>
+  </div>
+
+  <div class="weekly">
+    <div class="weekly-item">{{ today }}</div>
+    <div class="weekly-item">{{ tomorrow }}</div>
+    <div class="weekly-item">{{ after_tomorrow }}</div>
+    <div class="weekly-item">
+      <img src="{{ day_one_f }}" height="50px" width="50px" alt="d1_icon" />
+    </div>
+    <div class="weekly-item">
+      <img src="{{ day_two_f }}" height="50px" width="50px" alt="d2_icon" />
+    </div>
+    <div class="weekly-item">
+      <img src="{{ day_three_f }}" height="50px" width="50px" alt="d3_icon" />
+    </div>
+    <div class="city-temp">{{ day_one_h }}°</div>
+    <div class="city-temp">{{ day_two_h }}°</div>
+    <div class="city-temp">{{ day_three_h }}°</div>
+    <div class="city-temp">{{ day_one_l }}°</div>
+    <div class="city-temp">{{ day_two_l }}°</div>
+    <div class="city-temp">{{ day_three_l }}°</div>
+   </div>
+
+{% endblock %}

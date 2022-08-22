@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="form-wrap">
+    <form action="/login" method="POST">
+        {{ form.hidden_tag() }}
+        <div class="form-row">
+            {{ form.username.label (class='label') }}
+            {{ form.username (class='input') }}
+        </div>
+        <div class="form-row">
+            {{ form.password.label (class='label') }}
+            {{ form.password (class='input') }}
+        </div>
+        <div class="form-row">
+            {{ form.submit (class='btn') }}
+        </div>
+    </form>
+</div>
+{% endblock %}
